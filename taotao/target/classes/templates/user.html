@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Signin Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/webjars/bootstrap/4.3.0/css/bootstrap.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/user.css}" rel="stylesheet">
+</head>
+<body>
+<div class="text-center topbox">
+    <div class="topbar"><a th:href="@{/pre_main}">退款订单处理</a></div>
+    <div class="topbar"><a th:href="@{/user}">用户管理</a></div>
+</div>
+<div class="info_box">
+    <!--一个订单-->
+    <div th:each="item:${users}" class="one_user">
+        <!--一个用户信息-->
+        <p class="user_name_bf">用户名</p>
+        <p th:text="${item.user_name}" class="user_name_af"></p>
+        <a class="btn bth-sm btn-primary repasswd" th:href="@{/repasswd/}+${item.user_name}">重置密码</a>
+        <a class="btn bth-sm btn-danger deluser" th:href="@{/deluser/}+${item.user_name}">注销用户</a>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Signin Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/webjars/bootstrap/4.3.0/css/bootstrap.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+<div class="text-center topbox">
+    <div class="topbar"><a th:href="@{/pre_main}">退款订单处理</a></div>
+    <div class="topbar"><a th:href="@{/user}">用户管理</a></div>
+</div>
+<div class="info_box">
+    <!--一个订单-->
+    <div th:each="item_1:${refund_ticket}" class="one_order">
+        <!--一条订单信息-->
+        <p th:text="${item_1.key}"></p>
+        <div th:each="item_2:${item_1.value}" class="one_info">
+            <p th:text="${item_2.train_no}"></p>
+            <p th:text="${item_2.start_station_name}"></p>
+            <p th:text="${item_2.end_station_name}"></p>
+            <p th:text="${item_2.start_train_date}"></p>
+        </div>
+        <a class="btn bth-sm btn-primary" th:href="@{/confirm/}+${item_1.value[0].alipay_id}+@{/}+${item_1.key}">确认退款</a>
+    </div>
+
+</div>
+
+</body>
+
+</html>

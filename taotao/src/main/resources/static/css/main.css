@@ -1,0 +1,30 @@
+.topbar{
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.topbox{
+    display: flex;
+    justify-content: space-around;
+    background-color: #cccccc;
+}
+.one_info{
+    display: flex;
+}
+.info_box{
+    margin: 20px auto;
+    background-color: #cccccc;
+    width: 60%;
+}
+.one_order{
+    margin: 20px auto;
+    padding: 20px;
+    background-color: snow;
+    border: 5px solid blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

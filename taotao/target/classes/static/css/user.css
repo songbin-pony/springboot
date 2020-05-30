@@ -1,0 +1,53 @@
+.topbar{
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.topbox{
+    display: flex;
+    justify-content: space-around;
+    background-color: #cccccc;
+}
+.one_user{
+    margin: 20px;
+    background-color: cornflowerblue;
+    display: flex;
+
+}
+.info_box{
+    margin: 20px auto;
+    padding: 20px;
+    background-color: darkgreen;
+    width: 60%;
+}
+.user_name_af{
+    width: 20%;
+    height: 60px;
+    background-color: lavender;
+    text-align: center;
+    margin: 5px;
+    line-height: 60px;
+}
+.user_name_bf{
+    width: 20%;
+    background-color: lemonchiffon;
+    height: 60px;
+    text-align: center;
+    margin: 5px;
+    line-height: 60px;
+}
+.deluser{
+    height: 60px;
+    width: 30%;
+    margin: 5px;
+    line-height: 45px;
+}
+.repasswd{
+    height: 60px;
+    width: 30%;
+    margin: 5px;
+    line-height: 45px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Signin Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/webjars/bootstrap/4.3.0/css/bootstrap.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/index.css}" rel="stylesheet">
+</head>
+<body>
+<!--整体居中-->
+<div class="login-box">
+    <!--内容在中间框格居中-->
+    <div class="text-center">
+        <form th:action="@{/login}" method="post">
+            <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+            <input class="form-control" th:name="username" th:type="text" th:text="用户名">
+            <input class="form-control" th:type="password" th:name="password" th:text="密码">
+            <button class="btn-primary btn-block btn-lg btn" th:type="submit" th:text="登陆"></button>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

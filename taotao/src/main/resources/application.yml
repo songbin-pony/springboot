@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: pony
+    password: 1
+    url: jdbc:mysql://47.101.189.229:3306/pony
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
